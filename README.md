@@ -26,6 +26,7 @@ When they press space again the following should happen:
 2. A count up beings to measure the length of the exhale.
 
 This will continue until the user has completed a specified number of breath cycles.
+After the meditation ends we will display some statistics to the user about how they did.
 
 ## Releases
 
@@ -44,3 +45,44 @@ the model so that your code follows the MVC pattern. Here the keypress handler a
 
 In order to display the count up, and to store the lengths of time look into JavaSccript’s built-in
 `new Date()` and `setInterval`.
+
+You can hard code the number of breath cycles until a game ends for now, but use a “constant” (JavaScript doesn’t have real constants).
+
+### Release 2: Add client side stats to your interface
+
+Let’s track six stats on the client side that we will display while the user meditates:
+
+1. Longest inhale duration
+2. Average inhale duration
+3. Longest exhale duration
+4. Average exhale duration
+5. Longest cycle duration (a cycle consists of an inhale followed by an exhale)
+6. Average cycle duration
+
+These stats should update each time the user hits space.
+
+### Release 3: Add an intro screen and let the user set the length of a session
+
+Let’s add another route and another view. This view would just introduce the user to our app. It would also include a form where
+they can fill in a value for how many breath cycles they want to meditate for. When they submit the form, we send them to the
+meditation interface and pass the value they entered to JavaScript. Take a look at [this StackOverflow](http://stackoverflow.com/questions/6751871/better-way-to-use-ruby-sinatra-to-pass-data-to-highcharts)
+to get an idea of how to communicate between Sinatra and JavaScript.
+
+### Release 4: Interface with the backend through AJAX
+
+Let’s add some more stats to our display:
+
+1. All-time longest inhale
+2. All-time average inhale
+3. All-time longest exhale
+4. All-time average exhale
+
+We want these values to update each time the user presses space. However, these stats require backend database persistence.
+
+Design a database schema that can track these stats. It might look pretty simple, since we don’t have any users (unless you want
+to add that feature).
+
+When you have your database setup, add a route that will receive data from your JS interface about the user’s last breath, and returns
+JSON containing the updated All-time stats. Each time the user presses space, your JS interface should send an AJAX request to the
+server with information about the last breath the user took. The server should update the All-time stats as appropriate, and then
+send the updated All-time stats to the JS interface to display to the user.
