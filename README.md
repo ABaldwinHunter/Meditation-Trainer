@@ -37,7 +37,7 @@ Setup a route like `/meditate` that serves the page where we will display the Ja
 ### Release 1: Build the basic JavaScript interface
 
 With the route you’ve defined, build the basic interface and interaction for meditation.
-You might look into the [Mousetrap](craig.is/killing/mice) library for making keybindings nice and easy.
+You might look into the [Mousetrap](http://craig.is/killing/mice) library for making keybindings nice and easy.
 
 The first time you press space you will want to initialize a model object to track the state of the game.
 Subsequent keypresses should update the state of the model. Updates to the DOM should reflect the state of
