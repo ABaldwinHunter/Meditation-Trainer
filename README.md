@@ -23,7 +23,7 @@ When they press space the following should happen:
 When they press space again the following should happen:
 
 1. The prompt changes to “Exhale”.
-2. A count up beings to measure the length of the exhale.
+2. A count up begins to measure the length of the exhale.
 
 This will continue until the user has completed a specified number of breath cycles.
 After the meditation ends we will display some statistics to the user about how they did.
