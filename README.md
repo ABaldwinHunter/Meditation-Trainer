@@ -50,14 +50,12 @@ You can hard code the number of breath cycles until a game ends for now, but use
 
 ### Release 2: Add client side stats to your interface
 
-Let’s track six stats on the client side that we will display while the user meditates:
+Let’s track four stats on the client side that we will display while the user meditates:
 
 1. Longest inhale duration
 2. Average inhale duration
 3. Longest exhale duration
 4. Average exhale duration
-5. Longest cycle duration (a cycle consists of an inhale followed by an exhale)
-6. Average cycle duration
 
 These stats should update each time the user hits space.
 
