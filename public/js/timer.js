@@ -48,4 +48,6 @@ Timer.prototype.displayPhase = function() {
 
 
 
+
+
 // var showtime = setInterval(function() {console.log(Date.now()-start)/1000}, 200);
