@@ -1,5 +1,5 @@
-var Breath = function(type) {
-  this.length = 0;
+var Breath = function(type, length) {
+  this.length = length;
   this.type = type;
 }
 

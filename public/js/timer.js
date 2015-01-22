@@ -6,15 +6,14 @@ Timer.prototype.resetStartTime = function() {
   this.startTime = Date.now();
 }
 
-Timer.prototype.getBreathLength = function(){
+Timer.prototype.getIntervalLength = function(){
   return (Date.now() - this.startTime)/1000
 }
 
 Timer.prototype.displayTime = function(){
   self = this;
   var $timer = $('.timer');
-  // $timer.append("<h1> "+ self.getBreathLength() + "</h1>");
-  $timer.html(self.getBreathLength());
+  $timer.html(self.getIntervalLength());
 }
 
 
