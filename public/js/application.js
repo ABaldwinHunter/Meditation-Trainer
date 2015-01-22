@@ -12,6 +12,7 @@ $(document).ready(function() {
   });
   Mousetrap.bind('space', function(){
     meditation.loop();
+    meditation.lungBreathe();
     meditation.cycles++;
   });
   // Mousetrap.bind('k', function(){

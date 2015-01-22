@@ -13,7 +13,7 @@ var Meditation = function(){
   this.timer = new Timer();
   this.isOver = false;
   this.meditation_session;
-  this.$lung = $('#lung');
+  this.$lung = $('.container');
   this.r = 255;
   this.g = 0;
   this.b = 2;
@@ -22,7 +22,7 @@ var Meditation = function(){
 
 Meditation.prototype.start = function() {
   var self = this;
-  this.meditation_session = setInterval(function() {self.timer.displayTime();}, 250);
+  this.meditation_session = setInterval(function() {self.timer.displayTime();}, 200);
 }
 
 
@@ -36,7 +36,6 @@ Meditation.prototype.loop = function(){
     this.makeNewBreath(type, length);
     this.displayPhase();
     this.timer.resetStartTime();
-    self.lungBreathe();
   }
 }
 
@@ -92,16 +91,16 @@ Meditation.prototype.lungBreathe = function(){
   var self = this;
   if (self.phase == "Inhale") {
     setInterval(function() {
-        self.r -= 30;
-        self.g += 30;
-        self.b  += 30;
+        self.r -= 20;
+        self.g += 20;
+        self.b  += 20;
         self.$lung.css('background-color', 'rgba(' + self.r + ',' + self.g + ',' + self.b+ ',' +self.a +')')
         }, 200);
     } else {
       setInterval(function() {
-        self.r += 30;
-        self.g -= 30;
-        self.b  -= 30;
+        self.r += 20;
+        self.g -= 20;
+        self.b  -= 20;
         self.$lung.css('background-color', 'rgba(' + self.r + ',' + self.g + ',' + self.b+ ',' +self.a +')')
       }, 200);
     }
