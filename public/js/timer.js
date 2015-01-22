@@ -11,7 +11,7 @@ Timer.prototype.getIntervalLength = function(){
 }
 
 Timer.prototype.displayTime = function(){
-  self = this;
+  var self = this;
   var $timer = $('.timer');
   $timer.html(self.getIntervalLength());
 }

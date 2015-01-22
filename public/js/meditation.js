@@ -7,10 +7,20 @@ var Meditation = function(){
   this.breaths = [];
   this.timer = new Timer();
   this.isOver = false;
+  this.meditation_session;
 }
 
+Meditation.prototype.start = function() {
+  var self = this;
+  this.meditation_session = setInterval(function() {self.timer.displayTime();}, 250);
+}
+
+
 Meditation.prototype.loop = function(){
-  if (!this.checkFinish()) {
+  var self = this;
+  if (this.cycles == 0) {
+      self.start();
+  } else if (!this.checkFinish()) {
     var type = this.phase;
     var length = this.timer.getIntervalLength();
     this.makeNewBreath(type, length);
@@ -20,8 +30,15 @@ Meditation.prototype.loop = function(){
 }
 
 Meditation.prototype.checkFinish = function() {
-  return (this.cycles >= 10 || this.isOver)
-
+  var self = this;
+  console.log("in checkFinish")
+  if (this.cycles >= 10 || this.isOver){
+    console.log("is Over", self.meditation_session)
+    clearInterval(self.meditation_session);
+    return true;
+  } else {
+    return false
+  }
 }
 
 Meditation.prototype.makeNewBreath = function(type, length) {

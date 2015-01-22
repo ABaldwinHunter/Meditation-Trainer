@@ -3,11 +3,10 @@ $(document).ready(function() {
 
   $('.exit_button').click(function(){
     meditation.isOver = true;
+    meditation.checkFinish();
   });
-
   Mousetrap.bind('space', function(){
     meditation.loop();
-    setInterval(function() {meditation.timer.displayTime();}, 250);
     meditation.cycles++;
   });
 });
