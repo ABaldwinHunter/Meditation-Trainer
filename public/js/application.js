@@ -1,11 +1,15 @@
 $(document).ready(function() {
-  var timer = new Timer();
+  timer = new Timer();
   Mousetrap.bind('space', function(){
-    setInterval(function() {timer.displayTime();}, 5000);
-    timer.test();
+    timer.resetStartTime();
+    timer.displayPhase();
+    setInterval(function() {timer.displayTime();}, 200);
   });
 });
 
 
 
     // setInterval(function() {timer.displayTime();}, 200);
+  // $('h1').mouseover(function(){
+  //   $(this).toggleClass('red');
+  // })
