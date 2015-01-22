@@ -1,11 +1,14 @@
 $(document).ready(function() {
-  timer = new Timer();
   meditation = new Meditation();
 
+  $('.exit_button').click(function(){
+    meditation.isOver = true;
+  });
+
   Mousetrap.bind('space', function(){
-    timer.resetStartTime();
-    meditation.displayPhase();
-    setInterval(function() {timer.displayTime();}, 250);
+    meditation.loop();
+    setInterval(function() {meditation.timer.displayTime();}, 250);
+    meditation.cycles++;
   });
 });
 
