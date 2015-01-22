@@ -1,8 +1,10 @@
 $(document).ready(function() {
   timer = new Timer();
+  meditation = new Meditation();
+
   Mousetrap.bind('space', function(){
     timer.resetStartTime();
-    timer.displayPhase();
+    meditation.displayPhase();
     setInterval(function() {timer.displayTime();}, 250);
   });
 });

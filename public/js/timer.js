@@ -1,12 +1,9 @@
 var Timer = function() {
   this.startTime = Date.now();
-  this.cycles = 0;
-  this.phase = "inhale";
 }
 
 Timer.prototype.resetStartTime = function() {
   this.startTime = Date.now();
-  this.cycles += 1;
 }
 
 Timer.prototype.getBreathLength = function(){
@@ -20,20 +17,9 @@ Timer.prototype.displayTime = function(){
   $timer.html(self.getBreathLength());
 }
 
-Timer.prototype.currentPhase = function() {
-  if (this.cycles % 2 == 0) {
-    this.phase = "Inhale";
-  } else {
-    this.phase = "Exhale";
-  }
-}
 
-Timer.prototype.displayPhase = function() {
-  self = this;
-  self.currentPhase();
-  var $phase = $('.phase');
-  $phase.html(self.phase);
-}
+
+
 
 
 
