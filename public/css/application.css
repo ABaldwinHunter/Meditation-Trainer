@@ -13,8 +13,6 @@ div {
 }
 
 
-
-
 #lung {
   position: relative;
   border-radius: 100%;
@@ -24,4 +22,13 @@ div {
   text-align: center;
   margin: 0 auto;
   margin-top: 100px;
+}
+
+div.exit_button {
+  font-size: 2em;
+  font-color: blue;
+}
+
+.soft {
+  opacity: 0.5;
 }

@@ -1,10 +1,18 @@
 $(document).ready(function() {
+  var $exit_button = $('div')
   meditation = new Meditation();
-  // var $lung = $('#lung');
-  // var r = 255;
-  // var g = 0;
-  // var b = 2;
-  // var a = 0.3;
+
+  //hover effect
+  $exit_button.hover(function(event){
+    var $target = $(event.target);
+    $target.toggleClass('soft');
+  });
+
+  $('#lung').hover(function(event){
+    var $target = $(event.target);
+    // $target.show().animate({ top: 305 }, {duration: 1000, easing: 'easeOutBounce'});
+    $target.effect("bounce", { direction:'down', times:5 }, 300);
+  });
 
   $('.exit_button').click(function(){
     meditation.isOver = true;
@@ -12,22 +20,7 @@ $(document).ready(function() {
   });
   Mousetrap.bind('space', function(){
     meditation.loop();
-    meditation.lungBreathe();
     meditation.cycles++;
   });
-  // Mousetrap.bind('k', function(){
-  //   setInterval(function() {
-  //   r -= 30;
-  //   g += 30;
-  //   b  += 30;
-  //   $lung.css('background-color', 'rgba(' + r + ',' + g + ',' + b+ ',' +a +')')
-  //   }, 200);
-  // });
 });
 
-
-
-    // setInterval(function() {timer.displayTime();}, 200);
-  // $('h1').mouseover(function(){
-  //   $(this).toggleClass('red');
-  // })
