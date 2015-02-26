@@ -7,6 +7,7 @@ div {
 }
 
 .container {
+  position: fixed;
   width: 80%;
   margin: 0 auto;
   background-color: rgba(255,0,0,0.3);
