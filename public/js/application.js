@@ -1,7 +1,26 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  var $exit_button = $('div')
+  meditation = new Meditation();
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  //hover effect
+  $exit_button.hover(function(event){
+    var $target = $(event.target);
+    $target.toggleClass('soft');
+  });
+
+  $('#lung').hover(function(event){
+    var $target = $(event.target);
+    // $target.show().animate({ top: 305 }, {duration: 1000, easing: 'easeOutBounce'});
+    $target.effect("bounce", { direction:'down', times:5 }, 300);
+  });
+
+  $('.exit_button').click(function(){
+    meditation.isOver = true;
+    meditation.checkFinish();
+  });
+  Mousetrap.bind('space', function(){
+    meditation.loop();
+    meditation.cycles++;
+  });
 });
+
