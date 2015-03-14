@@ -106,13 +106,21 @@ Meditation.prototype.updateLung = function() {
 
 Meditation.prototype.getWidth = function(){
   var self = this;
-  self.width += 0.03;
+  if (self.phase === "Inhale") {
+    self.width += 0.03;
+  } else {
+    self.width -= 0.03;
+  }
   return parseInt(Math.abs(Math.sin(self.width))*500).toString() + "px"
 }
 
 Meditation.prototype.getHeight = function() {
   var self = this;
-  self.height += 0.03;
+  if (self.phase === "Inhale") {
+    self.height += 0.03;
+  } else {
+    self.height -= 0.03;
+  }
   return parseInt(Math.abs(Math.sin(self.width))*500).toString() + "px"
 }
 
