@@ -18,8 +18,8 @@ var Meditation = function(){
   this.g = 0;
   this.b = 2;
   this.a = 0.5;
-  this.width = 1;
-  this.height = 1;
+  this.width = 0.3;
+  this.height = 0.3;
 }
 
 Meditation.prototype.start = function() {
