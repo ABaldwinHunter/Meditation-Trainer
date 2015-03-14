@@ -2,6 +2,7 @@ var Meditation = function(){
   this.$lastBreath = $('#last_breath');
   this.$longestBreath = $('#longest_breath');
   this.$averageBreath = $('#average_breath');
+  this.$totalBreaths = $('#total_breaths');
   this.averageBreath = 0;
   this.longestBreath = 0;
   this.cycles = 0;
@@ -64,6 +65,7 @@ Meditation.prototype.checkFinish = function() {
 
 Meditation.prototype.updateBreathStats = function(breath){
   var self = this;
+  self.$totalBreaths.html(self.cycles);
   if (breath.length > self.longestBreath) {
     self.longestBreath = breath.length;
     self.$longestBreath.html(breath.length);
