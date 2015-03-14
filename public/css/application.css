@@ -10,7 +10,7 @@ div {
   width: 90%;
   height: 800px;
   margin: 0 auto;
-  background-color: rgba(255,0,0,0.3);
+  background-color: rgba(255,0,0,0.9);
   overflow: hidden;
 }
 
@@ -20,7 +20,7 @@ div {
   border-radius: 100%;
   width: 300px;
   height: 500px;
-  background-color: rgba(255,0,0,0.3);
+  background-color: rgba(255,0,0.9);
   text-align: center;
   margin: 0 auto;
   margin-top: 50px;
