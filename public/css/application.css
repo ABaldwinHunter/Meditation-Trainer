@@ -33,6 +33,7 @@ div.exit_button {
 }
 
 .intro {
+  background-color: #F0F8FF;
   height: 200px;
   margin-top: 20px;
   position: relative;

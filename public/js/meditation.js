@@ -53,8 +53,9 @@ Meditation.prototype.loop = function(){
 
 Meditation.prototype.checkFinish = function() {
   var self = this;
-  if (this.cycles >= 10 || this.isOver){
+  if (this.cycles >= 1000 || this.isOver){
     clearInterval(self.meditation_session);
+    alert("Well done. You've completed 1000 breaths!")
     return true;
   } else {
     return false
