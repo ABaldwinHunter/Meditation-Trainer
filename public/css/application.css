@@ -3,16 +3,22 @@ body {
 }
 
 div {
+  margin-top: 15px;
   text-align: center;
+}
+
+.intro {
+  height: 20%;
 }
 
 .container {
   width: 80%;
+  height: 650px;
   margin: 0 auto;
   background-color: rgba(255,0,0,0.3);
-  padding: 200px;
+  padding: 100px;
+  overflow: hidden;
 }
-
 
 #lung {
   position: relative;
@@ -27,8 +33,12 @@ div {
 }
 
 div.exit_button {
-  font-size: 2em;
+  position: absolute;
+  float: left;
   font-color: blue;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10%;
 }
 
 
