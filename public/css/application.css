@@ -7,10 +7,10 @@ div {
 }
 
 .container {
-  position: fixed;
   width: 80%;
   margin: 0 auto;
   background-color: rgba(255,0,0,0.3);
+  padding: 200px;
 }
 
 
@@ -23,6 +23,7 @@ div {
   text-align: center;
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 div.exit_button {
@@ -30,6 +31,4 @@ div.exit_button {
   font-color: blue;
 }
 
-.soft {
-  opacity: 0.5;
-}
+

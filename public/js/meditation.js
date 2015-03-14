@@ -11,17 +11,22 @@ var Meditation = function(){
   this.isOver = false;
   this.meditation_session;
   this.meditation_color_key;
-  this.$lung = $('.container');
+  this.meditationLungKey;
+  this.$container = $('.container');
+  this.$lung = $('#lung');
   this.r = 1;
   this.g = 0;
   this.b = 2;
   this.a = 0.5;
+  this.width = 1;
+  this.height = 1;
 }
 
 Meditation.prototype.start = function() {
   var self = this;
   this.meditation_session = setInterval(function() {self.timer.displayTime();}, 200);
   this.meditation_color_key = setInterval(function() {self.updateColor();}, 200);
+  this.meditationLungKey = setInterval(function() {self.updateLung();}, 200);
 }
 
 
@@ -93,9 +98,27 @@ Meditation.prototype.displayPhase = function() {
   $phase.html(self.phase);
 }
 
+Meditation.prototype.updateLung = function() {
+  var self = this;
+  self.$lung.css('width', self.getWidth());
+  self.$lung.css('height', self.getHeight());
+}
+
+Meditation.prototype.getWidth = function(){
+  var self = this;
+  self.width += 0.03;
+  return parseInt(Math.abs(Math.sin(self.width))*500).toString() + "px"
+}
+
+Meditation.prototype.getHeight = function() {
+  var self = this;
+  self.height += 0.03;
+  return parseInt(Math.abs(Math.sin(self.width))*500).toString() + "px"
+}
+
 Meditation.prototype.updateColor = function() {
   var self = this;
-  self.$lung.css('background-color', self.getColor());
+  self.$container.css('background-color', self.getColor());
 }
 
 Meditation.prototype.getColor = function() {
