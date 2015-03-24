@@ -3,6 +3,7 @@ var Meditation = function(){
   this.$longestBreath = $('#longest_breath');
   this.$averageBreath = $('#average_breath');
   this.$totalBreaths = $('#total_breaths');
+  this.$instructions = $('#spacebar');
   this.averageBreath = 0;
   this.longestBreath = 0;
   this.cycles = 0;
@@ -25,7 +26,7 @@ var Meditation = function(){
 
 Meditation.prototype.start = function() {
   var self = this;
-  $spacebar.remove();
+  this.$instructions.html =("");
   this.meditation_session = setInterval(function() {self.timer.displayTime();}, 200);
   this.meditation_color_key = setInterval(function() {self.updateColor();}, 200);
   this.meditationLungKey = setInterval(function() {self.updateLung();}, 200);
