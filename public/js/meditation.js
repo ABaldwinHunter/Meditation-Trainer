@@ -25,6 +25,7 @@ var Meditation = function(){
 
 Meditation.prototype.start = function() {
   var self = this;
+  $spacebar.remove();
   this.meditation_session = setInterval(function() {self.timer.displayTime();}, 200);
   this.meditation_color_key = setInterval(function() {self.updateColor();}, 200);
   this.meditationLungKey = setInterval(function() {self.updateLung();}, 200);

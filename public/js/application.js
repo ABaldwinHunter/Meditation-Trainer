@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var $spacebar = $('#spacebar');
   var $exit_button = $('div')
   meditation = new Meditation();
 
