@@ -3,6 +3,7 @@ $(document).ready(function() {
   meditation = new Meditation();
 
   //hover effect
+  
   $exit_button.hover(function(event){
     var $target = $(event.target);
     $target.toggleClass('soft');
