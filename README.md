@@ -16,18 +16,18 @@ the end of an exhale.”
 
 When they press space the following should happen:
 
-1. The prompt changes to “Inhale”.
-2. A count up begins to measure the length of the inhale.
+1. The prompt changes to “Inhale”
+2. A count up begins to measure the length of the inhale
 
 When they press space again the following should happen:
 
-1. The prompt changes to “Exhale”.
-2. A count up begins to measure the length of the exhale.
+1. The prompt changes to “Exhale”
+2. A count up begins to measure the length of the exhale
 
 This will continue until the user has completed a specified number of breath cycles.
-After the meditation ends we will display some statistics to the user about how they did.
+After the meditation ends we will display some statistics to the user about how they did
 
-## Releases
+## Release
 
 ### Release 0: Setup a route to a static page
 
