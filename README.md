@@ -9,8 +9,7 @@
 
 ## Summary
 
-Let’s build an application that helps us take longer and deeper breathes. We can begin by building a JavaScript interface that
-doesn’t persist data. Then we can build a backend and hook up our interface to it.
+Let’s build an application that helps us take longer and deeper breathes. We can begin by building a JavaScript interface that doesn’t persist data. Then we can build a backend and hook up our interface to it.
 
 When the user first loads the page we will prompt them: “Begin to breathe deeply. When you feel ready to begin, press Space at
 the end of an exhale.”
