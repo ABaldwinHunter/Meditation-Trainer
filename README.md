@@ -46,7 +46,7 @@ the model so that your code follows the MVC pattern. Here the keypress handler a
 In order to display the count up, and to store the lengths of time look into JavaSccript’s built-in
 `new Date()` and `setInterval`.
 
-You can hard code the number of breath cycles until a game ends for now, but use a “constant” (JavaScript doesn’t have real constants).
+You can hard code the number of breath cycles until a game ends for now, but use a constant.
 
 ### Release 2: Add client side stats to your interface
 
